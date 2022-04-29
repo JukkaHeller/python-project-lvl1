@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import random
-from brain_games.engine import welcome_user, ask_question, \
+from brain_games.games.functions import welcome_user, ask_question, \
     get_answer, check_answer
 
 
@@ -29,11 +29,3 @@ def calc():
             print(f"'{players_answer}' is wrong answer ;(. Correct answer was "
                   f"{correct_answer}'.\nLet's try again, {user_name}!")
             try_count = 3
-
-
-def main():
-    calc()
-
-
-if __name__ == '__main__':
-    main()

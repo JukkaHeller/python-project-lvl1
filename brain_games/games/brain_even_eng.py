@@ -3,7 +3,7 @@ import random
 import prompt
 
 
-def main():
+def even():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
@@ -31,7 +31,3 @@ def main():
             print(f"'{answer}' is wrong answer ;(. Correct answer was "
                   f"{answer_is_odd}'.\nLet's try again, {name}!")
             try_count = 3
-
-
-if __name__ == '__main__':
-    main()
