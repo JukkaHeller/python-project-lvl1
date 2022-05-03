@@ -3,12 +3,15 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ![brain_games workflow](https://github.com/JukkaHeller/python-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)
 
+# Description
+
 This project includes couple of games. After installing use following commands to play:
-brain-even          - runs game where you should answer is number even or not
-brain-calc          - runs game where you should resolve simple math expression
-brain_gcd           - runs game where you should find least common devisor of random number
-brain_progression   - runs game where you should find missed number in arithmetical progression
-brain_prime         - runs game where you answer is random number prime or not
+
+* brain-even          - runs game where you should answer is number even or not
+* brain-calc          - runs game where you should resolve simple math expression
+* brain_gcd           - runs game where you should find least common devisor of random number
+* brain_progression   - runs game where you should find missed number in arithmetical progression
+* brain_prime         - runs game where you answer is random number prime or not
 
 [![asciicast](https://asciinema.org/a/saOkZ59Ff1wlX2jepuoJwrhkN.svg)](https://asciinema.org/a/saOkZ59Ff1wlX2jepuoJwrhkN)
 
