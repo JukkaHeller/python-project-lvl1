@@ -1,31 +1,23 @@
 #!/usr/bin/env python
 import random
-from brain_games.games.functions import welcome_user, ask_question, \
-    get_answer, check_answer
+from brain_games.games.functions import welcome_user, ask_question
+from brain_games.games.functions import get_answer, check_answer
 
 
 def calc():
-
     user_name = welcome_user()
     print('What is the result of the expression?')
-
-    try_count = 0
-
-    while try_count <= 2:
-        random_number_1 = random.randrange(1, 10)
-        random_number_2 = random.randrange(1, 10)
-        operators = ['+', '-', '*']
-        random_operator = random.choice(operators)
+    tries = 0
+    for tries in range(3):
+        random_number_1 = random.randrange(1, 100)
+        random_number_2 = random.randrange(1, 100)
+        random_operator = random.choice(['+', '-', '*'])
         correct_answer = eval(f'{random_number_1} {random_operator} '
                               f'{random_number_2}')
         ask_question(f'{random_number_1} {random_operator} {random_number_2}')
-        players_answer = get_answer()
-        if check_answer(str(players_answer), str(correct_answer)):
-            print('Correct!')
-            try_count += 1
-            if try_count == 3:
-                print(f'Congratulations, {user_name}!')
+        players_answer = int(get_answer())
+        print(check_answer(players_answer, correct_answer, user_name))
+        if players_answer != correct_answer:
+            break
         else:
-            print(f"'{players_answer}' is wrong answer ;(. Correct answer was "
-                  f"{correct_answer}'.\nLet's try again, {user_name}!")
-            try_count = 3
+            tries += 1

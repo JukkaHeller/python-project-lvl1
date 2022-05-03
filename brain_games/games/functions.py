@@ -16,8 +16,9 @@ def get_answer():
     return players_answer
 
 
-def check_answer(players_answer, correct_answer):
+def check_answer(players_answer, correct_answer, user_name):
     if players_answer == correct_answer:
-        return True
+        return f'Congratulations, {user_name}!'
     else:
-        return False
+        return f"'{players_answer}' is wrong answer ;(. Correct answer was " \
+               f"'{correct_answer}'.\nLet's try again, {user_name}!"
