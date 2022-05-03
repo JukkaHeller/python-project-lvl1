@@ -15,6 +15,8 @@ This project includes couple of games. After installing use following commands t
 
 [![asciicast](https://asciinema.org/a/saOkZ59Ff1wlX2jepuoJwrhkN.svg)](https://asciinema.org/a/saOkZ59Ff1wlX2jepuoJwrhkN)
 
+[![asciicast](https://asciinema.org/a/QVzC6ZCRfeQW6eKwOd0LMpJ7W.svg)](https://asciinema.org/a/QVzC6ZCRfeQW6eKwOd0LMpJ7W)
+
 [![asciicast](https://asciinema.org/a/Sz1OmqaS44qPhhlVtxqFh9arp.svg)](https://asciinema.org/a/Sz1OmqaS44qPhhlVtxqFh9arp)
 
 [![asciicast](https://asciinema.org/a/X7jXmUvy8gDvwIXrBSoV43FZS.svg)](https://asciinema.org/a/X7jXmUvy8gDvwIXrBSoV43FZS)
