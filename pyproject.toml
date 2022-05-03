@@ -1,10 +1,20 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.8.0"
-description = ""
-authors = ["Jukka <you@example.com>"]
+description = "Simlple learning project"
+repository = "https://github.com/JukkaHeller/python-project-lvl1"
+authors = ["Jukka <tor.of.minoc@gmail.com>"]
 packages = [
   { include = "brain_games" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha"
+    "Intended Audience :: Education"
+    "License :: Freeware"
+    "Natural Language :: English"
+    "Operating System :: OS Independent"
+    "Programming Language :: Python :: 3.8"
+    "Topic :: Games/Entertainment"
 ]
 
 [tool.poetry.dependencies]
