@@ -7,7 +7,6 @@ from brain_games.games.functions import get_answer, check_answer
 def progression():
     user_name = welcome_user()
     print('What number is missing in the progression?')
-    tries = 0
     for tries in range(3):
         progression_length = random.randrange(5, 10)
         progression_gap = random.randrange(1, 4)
@@ -29,5 +28,3 @@ def progression():
         print(check_answer(players_answer, correct_answer, user_name))
         if players_answer != correct_answer:
             break
-        else:
-            tries += 1

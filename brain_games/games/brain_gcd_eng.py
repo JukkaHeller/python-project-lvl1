@@ -7,7 +7,6 @@ from brain_games.games.functions import get_answer, check_answer
 def gcd():
     user_name = welcome_user()
     print('Find the greatest common divisor of given numbers.')
-    tries = 0
     for tries in range(3):
         random_number_1 = random.randrange(1, 100)
         random_number_2 = random.randrange(1, 100)
@@ -17,8 +16,6 @@ def gcd():
         print(check_answer(players_answer, correct_answer, user_name))
         if players_answer != correct_answer:
             break
-        else:
-            tries += 1
 
 
 # Euclid method of finding least common deviser
