@@ -1,17 +1,16 @@
 #!/usr/bin/env python
 import random
-from brain_games.games.functions import welcome_user, ask_question
-from brain_games.games.functions import get_answer, check_answer
+from brain_games.games.functions import ask_and_check, welcome_user
 
 
 def even():
     user_name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    for tries in range(3):
+    for tries in range(3):  # 3 attempts at default
         random_number = random.randrange(1, 100)
+        question = random_number
         correct_answer = 'yes' if random_number % 2 == 0 else 'no'
-        ask_question(random_number)
-        players_answer = get_answer()
-        print(check_answer(players_answer, correct_answer, user_name))
-        if players_answer != correct_answer:
+        if ask_and_check(question, correct_answer, user_name):
+            continue
+        else:
             break
