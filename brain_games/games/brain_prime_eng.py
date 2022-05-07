@@ -16,23 +16,24 @@ for i in range(2, random_number):
         return True
 """
 
+rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 def prime():
-    rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    random_number = random.randrange(2, 100)
+    prime_numbers = [
+        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
+        37, 41, 43, 47, 53, 59, 61, 67, 71,
+        73, 79, 83, 89, 97
+    ]
+    question = random_number
+    for i in prime_numbers:
+        if random_number == i:
+            correct_answer = 'yes'
+            break
+        else:
+            correct_answer = 'no'
+    return [question, correct_answer]
 
-    def question_and_answer():
-        random_number = random.randrange(2, 100)
-        prime_numbers = [
-            2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
-            37, 41, 43, 47, 53, 59, 61, 67, 71,
-            73, 79, 83, 89, 97
-        ]
-        question = random_number
-        for i in prime_numbers:
-            if random_number == i:
-                correct_answer = 'yes'
-                break
-            else:
-                correct_answer = 'no'
-        return [question, correct_answer]
-    ask_and_check(rules, question_and_answer)
+
+ask_and_check(rules, prime)
