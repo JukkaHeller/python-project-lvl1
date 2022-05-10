@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import random
-from brain_games.games.functions import ask_and_check
 
 
 """
@@ -19,7 +18,7 @@ for i in range(2, random_number):
 rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def prime():
+def game():
     random_number = random.randrange(2, 100)
     prime_numbers = [
         2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
@@ -34,6 +33,3 @@ def prime():
         else:
             correct_answer = 'no'
     return [question, correct_answer]
-
-
-ask_and_check(rules, prime)

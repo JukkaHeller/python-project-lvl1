@@ -1,8 +1,9 @@
-from brain_games.games.brain_prime_eng import prime
+from brain_games.engine.engine import ask_and_check
+import brain_games.games.prime
 
 
 def main():
-    prime()
+    ask_and_check(brain_games.games.prime)
 
 
 if __name__ == '__main__':

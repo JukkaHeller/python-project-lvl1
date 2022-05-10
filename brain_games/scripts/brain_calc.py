@@ -1,8 +1,9 @@
-from brain_games.games.brain_calc_eng import calc
+from brain_games.engine.engine import ask_and_check
+import brain_games.games.calc
 
 
 def main():
-    calc()
+    ask_and_check(brain_games.games.calc)
 
 
 if __name__ == '__main__':

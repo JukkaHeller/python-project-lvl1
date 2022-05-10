@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 import random
-from brain_games.games.functions import ask_and_check
 
 
 rules = 'What number is missing in the progression?'
 
 
-def progression():
+def game():
     progression_length = random.randrange(5, 10)
     progression_gap = random.randrange(1, 4)
     progression_begin = random.randrange(5, 25)
@@ -24,6 +23,3 @@ def progression():
         x += 1
     question = progression
     return [question, correct_answer]
-
-
-ask_and_check(rules, progression)

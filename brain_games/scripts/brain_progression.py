@@ -1,8 +1,9 @@
-from brain_games.games.brain_progression_eng import progression
+from brain_games.engine.engine import ask_and_check
+import brain_games.games.progression
 
 
 def main():
-    progression()
+    ask_and_check(brain_games.games.progression)
 
 
 if __name__ == '__main__':
