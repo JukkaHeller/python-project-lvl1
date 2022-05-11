@@ -2,11 +2,13 @@
 import prompt
 
 
-def ask_and_check(game):
+TRIES_AMOUNT = 3  # 3 attempts at default
+
+
+def launch(game):
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!\n{game.rules}')
-    tries_amount = 3  # 3 attempts at default
-    for tries in range(tries_amount):
+    for tries in range(TRIES_AMOUNT):
         question, correct_answer = game.game()
         print(f'Question: {question}')
         players_answer = prompt.string('Your answer: ')

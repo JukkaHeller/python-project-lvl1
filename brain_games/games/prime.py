@@ -2,34 +2,28 @@
 import random
 
 
-"""
-as we don't want user to make that much math
-we can just take first couple prime numbers in range 2, 100
-and compare random number to theese prime numbers
-instead of realizing
-for i in range(2, random_number):
-    if random_number % i == 0
-        return False
-        break
-    else:
-        return True
-"""
-
 rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def game():
     random_number = random.randrange(2, 100)
-    prime_numbers = [
-        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
-        37, 41, 43, 47, 53, 59, 61, 67, 71,
-        73, 79, 83, 89, 97
-    ]
+
+# Sieve of Eratosthenes to generate prime numbers sequence
+    primes_limit = 101  # in range 0, 100
+
+# prime list initialization
+    prime_list = []
+
+# boolean array for primes_limit range
+    boolean_array = [True] * primes_limit
+
+    for i in range(2, primes_limit):
+        if boolean_array[i]:
+            for j in range(i ** 2, primes_limit, i):
+                boolean_array[j] = False
+    for i in range(2, primes_limit):
+        if boolean_array[i]:
+            prime_list.append(i)
     question = random_number
-    for i in prime_numbers:
-        if random_number == i:
-            correct_answer = 'yes'
-            break
-        else:
-            correct_answer = 'no'
+    correct_answer = 'yes' if random_number in prime_list else 'no'
     return [question, correct_answer]

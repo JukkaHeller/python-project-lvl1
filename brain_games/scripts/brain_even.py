@@ -1,9 +1,9 @@
-from brain_games.engine.engine import ask_and_check
+from brain_games.engine import launch
 import brain_games.games.even
 
 
 def main():
-    ask_and_check(brain_games.games.even)
+    launch(brain_games.games.even)
 
 
 if __name__ == '__main__':
