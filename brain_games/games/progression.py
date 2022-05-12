@@ -15,5 +15,5 @@ def run_game():
         progression.append(str(item))
     correct_answer = str(progression[progression_skip])
     progression[progression_skip] = '..'
-    question = ', '.join(progression)
+    question = ' '.join(progression)
     return [question, correct_answer]
