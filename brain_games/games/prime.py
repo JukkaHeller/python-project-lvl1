@@ -2,7 +2,7 @@ import random
 import math
 
 
-RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def run_game():
@@ -14,8 +14,11 @@ def run_game():
 
 def is_prime(number):
     divisor = 2
-    while divisor <= math.sqrt(number):
-        if number % divisor == 0:
-            return False
-        divisor += 1
-    return True
+    if number < 2:
+        return False
+    else:
+        while divisor <= math.sqrt(number):
+            if number % divisor == 0:
+                return False
+            divisor += 1
+        return True

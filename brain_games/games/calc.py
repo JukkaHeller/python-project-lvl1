@@ -1,7 +1,7 @@
 import random
 
 
-RULES = 'What is the result of the expression?'
+GAME_RULE = 'What is the result of the expression?'
 
 
 def run_game():
@@ -14,6 +14,6 @@ def run_game():
         correct_answer = str(random_number_1 + random_number_2)
     elif random_operator == '-':
         correct_answer = str(random_number_1 - random_number_2)
-    else:
+    elif random_operator == '*':
         correct_answer = str(random_number_1 * random_number_2)
     return [question, correct_answer]
