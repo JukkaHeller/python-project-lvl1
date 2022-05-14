@@ -16,9 +16,8 @@ def is_prime(number):
     divisor = 2
     if number < 2:
         return False
-    else:
-        while divisor <= math.sqrt(number):
-            if number % divisor == 0:
-                return False
-            divisor += 1
-        return True
+    while divisor <= math.sqrt(number):
+        if number % divisor == 0:
+            return False
+        divisor += 1
+    return True
